@@ -438,26 +438,74 @@ export default function LandingPage({ user, setView }) {
             Langkah Nyata
           </h2>
           <p className="sf-display text-3xl font-semibold tracking-tight sm:text-4xl" style={{ color: "var(--ink-900)" }}>
-            Empat pilar utama pencegahan stunting
+            CARA PENCEGAHAN
           </p>
         </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-px" style={{ background: "var(--line)" }}>
           {[
-            { icon: "🤱", title: "ASI Eksklusif 6 Bulan", desc: "Berikan ASI saja tanpa makanan/minuman tambahan sejak lahir hingga usia 6 bulan untuk fondasi gizi terbaik.", tone: "var(--accent)", span: "lg:col-span-4" },
-            { icon: "🥣", title: "MPASI Bergizi Seimbang", desc: "Lanjutkan dengan makanan pendamping ASI yang cukup protein hewani, sayur, dan buah mulai usia 6 bulan.", tone: "#0EA5E9", span: "lg:col-span-2" },
-            { icon: "📏", title: "Rutin ke Posyandu", desc: "Pantau berat dan tinggi badan anak tiap bulan agar tanda gagal tumbuh terdeteksi sejak dini.", tone: "#F5A524", span: "lg:col-span-2" },
-            { icon: "🚰", title: "Sanitasi & Air Bersih", desc: "Pastikan keluarga memiliki akses jamban sehat dan air bersih untuk mencegah infeksi berulang pada anak.", tone: "var(--coral)", span: "lg:col-span-4" },
+            {
+              icon: "💊",
+              title: "A – Aktif minum Tablet Tambah Darah (TTD)",
+              desc: "Ibu hamil aktif mengonsumsi Tablet Tambah Darah (TTD) secara rutin untuk membantu memenuhi kebutuhan zat besi selama kehamilan.",
+              tone: "var(--accent)",
+              span: "lg:col-span-2"
+            },
+            {
+              icon: "🤰",
+              title: "B – Bumil teratur periksa kehamilan minimal 6 kali",
+              desc: "Ibu hamil melakukan pemeriksaan kehamilan secara teratur minimal 6 kali untuk memantau kesehatan ibu dan perkembangan janin.",
+              tone: "#0EA5E9",
+              span: "lg:col-span-2"
+            },
+            {
+              icon: "🍗",
+              title: "C – Cukupi konsumsi protein hewani",
+              desc: "Penuhi kebutuhan gizi dengan mengonsumsi sumber protein hewani seperti telur, ikan, ayam, dan daging untuk mendukung pertumbuhan anak.",
+              tone: "#F5A524",
+              span: "lg:col-span-2"
+            },
+            {
+              icon: "📏",
+              title: "D – Datang ke Posyandu setiap bulan",
+              desc: "Datang ke Posyandu setiap bulan untuk memantau berat dan tinggi badan anak serta mendeteksi masalah pertumbuhan sejak dini.",
+              tone: "var(--coral)",
+              span: "lg:col-span-3"
+            },
+            {
+              icon: "🤱",
+              title: "E – Eksklusif ASI selama 6 bulan",
+              desc: "Berikan ASI eksklusif selama 6 bulan pertama untuk mendukung kebutuhan nutrisi dan pertumbuhan optimal bayi.",
+              tone: "var(--accent)",
+              span: "lg:col-span-3"
+            },
           ].map((f, i) => (
-            <Reveal key={f.title} delay={String(i + 1)} className={`sf-card p-7 ${f.span}`} style={{ background: "var(--paper)" }}>
+            <Reveal
+              key={f.title}
+              delay={String(i + 1)}
+              className={`sf-card p-7 ${f.span}`}
+              style={{ background: "var(--paper)" }}
+            >
               <div
                 className="w-10 h-10 flex items-center justify-center font-bold text-base mb-4"
                 style={{ background: `${f.tone}1A`, color: f.tone }}
               >
                 {f.icon}
               </div>
-              <h4 className="font-bold mb-2 text-sm sf-display" style={{ color: "var(--ink-900)" }}>{f.title}</h4>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--ink-500)" }}>{f.desc}</p>
+
+              <h4
+                className="font-bold mb-2 text-sm sf-display"
+                style={{ color: "var(--ink-900)" }}
+              >
+                {f.title}
+              </h4>
+
+              <p
+                className="text-xs leading-relaxed"
+                style={{ color: "var(--ink-500)" }}
+              >
+                {f.desc}
+              </p>
             </Reveal>
           ))}
         </div>
